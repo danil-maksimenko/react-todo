@@ -1,0 +1,46 @@
+.task-form {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.task-form__input {
+  width: 381px;
+  height: 40px;
+
+  padding: 11px 15px;
+
+  color: white;
+
+  border-radius: 10px;
+  border: 1px solid #3e1671;
+  background: #0d0714;
+}
+
+.task-form__button {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  border: none;
+  background: #9e78cf;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-form__button:disabled {
+  background: #9e78cf;
+}
+
+.task-form__button:hover:not(:disabled) {
+  cursor: pointer;
+  background: #b196d4;
+}
+
+.task-form__button-image {
+  width: 22px;
+  height: 22px;
+}

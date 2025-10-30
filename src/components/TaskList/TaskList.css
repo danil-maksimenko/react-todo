@@ -1,0 +1,12 @@
+.task-list {
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+.task-list__list-name {
+  margin: 0;
+}
