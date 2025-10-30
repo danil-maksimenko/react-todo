@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import TaskForm from "./components/TaskForm/TaskForm";
 import TaskCard from "./components/TaskCard/TaskCard";
@@ -12,12 +12,12 @@ function App() {
         ? JSON.parse(saved)
         : [
             { id: 1, text: "To study React", isDone: true },
-            { id: 1, text: "Make coffee", isDone: false },
+            { id: 2, text: "Make coffee", isDone: false },
           ];
     } catch {
       return [
         { id: 1, text: "To study React", isDone: true },
-        { id: 1, text: "Make coffee", isDone: false },
+        { id: 2, text: "Make coffee", isDone: false },
       ];
     }
   });
@@ -50,8 +50,12 @@ function App() {
     );
   }
 
-  const todo = tasks.filter((task) => !task.isDone);
-  const done = tasks.filter((task) => task.isDone);
+  const { todo, done } = useMemo(() => {
+    return {
+      todo: tasks.filter((task) => !task.isDone),
+      done: tasks.filter((task) => task.isDone),
+    };
+  }, [tasks]);
 
   return (
     <div className="app">
@@ -65,6 +69,7 @@ function App() {
           <TaskCard
             key={task.id}
             text={task.text}
+            isDone={task.isDone}
             onToggle={() => toggleTask(task.id)}
             onRemove={() => removeTask(task.id)}
           />
@@ -79,6 +84,7 @@ function App() {
           <TaskCard
             key={task.id}
             text={task.text}
+            isDone={task.isDone}
             onToggle={() => toggleTask(task.id)}
             onRemove={() => removeTask(task.id)}
           />

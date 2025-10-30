@@ -1,6 +1,6 @@
-export default function TaskCard({ text, onToggle, onRemove }) {
+export default function TaskCard({ text, onToggle, onRemove, isDone }) {
   return (
-    <div className="task-list__card">
+    <div className={`task-list__card task-list__card--done-${isDone}`}>
       <p className="task-list__card-text">{text}</p>
       <div className="task-list__card-buttons">
         <button

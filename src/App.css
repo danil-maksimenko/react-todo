@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Inter;
 }
 
 /* #region task-form */
@@ -88,6 +89,11 @@
   line-height: normal;
 }
 
+.task-list__card--done-true .task-list__card-text {
+  color: #78cfb0;
+  text-decoration-line: line-through;
+}
+
 .task-list__card-buttons {
   display: flex;
   align-items: center;
@@ -112,10 +118,4 @@
 .task-list__card-button:hover {
   cursor: pointer;
   background: #392c4c;
-}
-
-.task-list__card-button_check {
-}
-
-.task-list__card-button_trash {
 }
