@@ -1,0 +1,53 @@
+.task-list__card {
+  padding: 27px 25px;
+
+  width: 432px;
+  height: 75px;
+  border-radius: 10px;
+  border: none;
+  background: #15101c;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-list__card-text {
+  color: #9e78cf;
+  font-family: Inter; /* TO DO */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.task-list__card--done-true .task-list__card-text {
+  color: #78cfb0;
+  text-decoration-line: line-through;
+}
+
+.task-list__card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.task-list__card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 5px;
+  border: none;
+  background: #15101c;
+}
+
+.task-list__card-button:hover {
+  cursor: pointer;
+  background: #392c4c;
+}

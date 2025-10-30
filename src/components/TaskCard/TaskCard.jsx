@@ -1,3 +1,5 @@
+import "./TaskCard.css";
+
 export default function TaskCard({ text, onToggle, onRemove, isDone }) {
   return (
     <div className={`task-list__card task-list__card--done-${isDone}`}>
